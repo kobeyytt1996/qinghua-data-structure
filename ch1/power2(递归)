@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+__int64 power2(int n);
+int main() {
+	int i = 3;
+	__int64 pi = power2(i);
+	cout << pi << endl;
+}
+
+
+inline int square(int a) { return a*a; }
+__int64 power2(int n) { //幂函数2^n算法（多向递归），n >= 0
+	__int64 value;
+	if (n == 0) return 1;
+	return ((n % 2) ? square(power2(n >> 1)) << 1 : square(power2(n >> 1)));
+}

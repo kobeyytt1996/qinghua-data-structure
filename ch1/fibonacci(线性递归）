@@ -4,7 +4,7 @@ using namespace std;
 __int64 fib(int n, __int64 &prev);
 int main() {
 	int i = 6;
-	__int64 f;
+	__int64 f = 64; //这里赋值为多少均不影响结果，形式参数
 	cout << fib(i, f) << endl;
 }
 

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+__int64 fib(int n, __int64 &prev);
+int main() {
+	int i = 6;
+	__int64 f;
+	cout << fib(i, f) << endl;
+}
+
+
+__int64 fib(int n, __int64 &prev) {
+	if (n == 0) {
+		prev = 1;
+		return 0;
+	}
+	else
+	{
+		__int64 prevprev;
+		prev = fib(n - 1, prevprev);
+		return prev + prevprev;
+	}
+}
